@@ -1,8 +1,6 @@
-let a = "hello";
-a = "bye"
-a= 1; // X 
+let a : number = 1;
+let b : string = "li";
+let c : boolean = true;
 
-let b : boolean = "abc"; // X
-let  b = true;
-
-let c : number = [];
+let d : number[] = [1];
+let z = [1, 2];
