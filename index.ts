@@ -1,7 +1,13 @@
-const player: object {
+type Player {
     name : string,
-    age: number
-} = {
-    name : "nico",
-    age : 1
+    age? : number
+}
+
+const nico : Player = {
+    name : "nico"
+}
+
+const lynn : Player = {
+    name : "lynn",
+    age : 20
 }
