@@ -1,6 +1,8 @@
-type Player {
-    name : string,
-    age? : number
+type Name = string;
+type age = number;
+type Player = {
+    name : Name,
+    age? : age
 }
 
 const nico : Player = {
