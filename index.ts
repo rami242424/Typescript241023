@@ -1,3 +1,5 @@
-const a : any[] = [1,2,3,4]
-const b : any = true
-a + b 
+let a : unknown;
+
+if( typeof a === 'number'){
+    let b = a + 1
+}
