@@ -1,5 +1,3 @@
-// Tuple
-const player : [string, number, boolean] = ["nico", 12, true]
-player[0] = "hi"
-player[1] = 1
-player[2] = false
+const a : any[] = [1,2,3,4]
+const b : any = true
+a + b 
