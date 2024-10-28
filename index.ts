@@ -1,13 +1,11 @@
 // generic
 type SuperPrint = {
-    <TypePlaceHolder>(arr: TypePlaceHolder[]) : void
+    <TypePlaceHolder>(arr: TypePlaceHolder[]) : TypePlaceHolder
 }
 
-const superPrint : SuperPrint = (arr) => {
-    arr.forEach(i => console.log(i))
-}
+const superPrint : SuperPrint = (arr) => arr[0]
 
-superPrint([1,2,3,4])
-superPrint([true, false, false])
-superPrint(["string", "why"])
-superPrint([1, false, "yay"])
+const a = superPrint([1,2,3,4])
+const b = superPrint([true, false, false])
+const c = superPrint(["string", "why"])
+const d = superPrint([1, false, "yay"])
