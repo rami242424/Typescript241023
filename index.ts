@@ -1,12 +1,16 @@
-type Add = {
-    (a: number, b: number) : number
-    (a: number, b: number, c: number) : number
+// concrete type
+type SuperPrint = {
+    (arr: number[]) : void
+    (arr: boolean[]) : void
+    (arr: string[]) : void
+    (arr: (number | boolean | string)[]) : void
 }
 
-const add : Add = (a,b,c?:number) =>  {
-    if(c) return a + b + c
-    return a + b
+const superPrint : SuperPrint = (arr) => {
+    arr.forEach(i => console.log(i))
 }
 
-add(1, 2)
-add(1, 2, 3)
+superPrint([1,2,3,4])
+superPrint([true, false, false])
+superPrint(["string", "why"])
+superPrint([1, false, "yay"])
