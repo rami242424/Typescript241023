@@ -1,9 +1,6 @@
-// concrete type
+// generic
 type SuperPrint = {
-    (arr: number[]) : void
-    (arr: boolean[]) : void
-    (arr: string[]) : void
-    (arr: (number | boolean | string)[]) : void
+    <TypePlaceHolder>(arr: TypePlaceHolder[]) : void
 }
 
 const superPrint : SuperPrint = (arr) => {
