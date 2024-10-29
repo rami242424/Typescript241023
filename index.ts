@@ -1,26 +1,16 @@
-// interface User {
-//     name: string
-// }
-
-// interface User {
-//     lastName: string
-// }
-
-// interface User {
-//     health: number
-// }
-
-// const nico: User = {
-//     name: "nico",
-//     lastName: "oh",
-//     health: 100
-// }
-
-
-// type 은 이런식으로 사용 불가능.
-type User = {
-    name: string
+abstract class User {
+    constructor (
+        protected firstName: string,
+        protected lastName: string
+    ){}
+    abstract sayHi(name: string): string
+    abstract fullName(): string
 }
-type User = {
-    lastName: string
+
+class Player extends User {
+    fullName() {
+        return `${this.firstName} ${this.lastName}`
+    }
+    sayHi(name:string){
+        return `Hello ${name}. My name is ${this.fullName}`
 }
