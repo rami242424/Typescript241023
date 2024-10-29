@@ -1,18 +1,27 @@
-type PlayerA = {
-    firstName : string
+interface SStorage<T> {
+    [key:string] : T
+}
+class LocalStorage<T> {
+    private storage: SStorage<T> = {}
+    set(key:string, value:T){
+        this.storage[key] = value;
+    }
+    remove(key:string){
+        delete this.storage[key]
+    }
+    get(key:string):T {
+        return this.storage[key]
+    }
+    clear(){
+        this.storage = {}
+    }
 }
 
-interface PlayerB {
-    firstName : string
-}
+const stringsStorage = new LocalStorage<string>()
 
-class UserA implements PlayerA {
-    constructor(
-        public firstName: string
-    ){}
-}
-class UserB implements PlayerB {
-    constructor(
-        public firstName: string
-    ){}
-}
+stringsStorage.get("key")
+stringsStorage.set("hello", "value_string")
+
+const booleansStorage = new LocalStorage<boolean>()
+booleansStorage.get("ysy")
+booleansStorage.set("helloo", false)
