@@ -1,7 +1,21 @@
-// generic 사용방법2 : Array<number>
-type a = Array<number>
-let a : A = [1, 2, 3, 4]
+abstract class User {
+    constructor(
+        protected firstName : string,
+        protected lastName: string,
+        protected nickName: string
+    ){}
+    abstract getNickName(): void
 
-
-function printAllNumber(arr: Array<number>){
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
 }
+
+class Player extends User {
+    getNickName(){
+        console.log(this.nickName)
+    }
+}
+
+const nico = new Player("nico", "las", "니꼬");
+nico.getFullName()
