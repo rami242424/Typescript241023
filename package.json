@@ -1,15 +1,20 @@
 {
   "name": "typescript_241023",
   "version": "1.0.0",
-  
   "scripts": {
-    "build":  "tsc"
+    "build": "tsc",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "start": "node build/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.7"
   }
 }
