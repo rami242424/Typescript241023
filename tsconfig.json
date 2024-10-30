@@ -1,0 +1,10 @@
+// 이 파일이 있으면 vs code는 우리가 타입스크립트로 작업한다는 것을 즉시 알게된다.
+
+{
+    // 타입스크립트 파일이 어디있는지 정보
+    "include": ["src"],
+    "compilerOptions": {
+        "outDir": "build",
+        "target": "ES6",
+    }
+}
