@@ -49,7 +49,6 @@ const blockchain = new BlockChain();
 blockchain.addBlock("first one");
 blockchain.addBlock("second one");
 blockchain.addBlock("third one");
-blockchain.addBlock("fourth one");
 
-blockchain.getBlocks().push(new Block("wow yqyq", 0, "i got this lol"))
+blockchain.getBlocks().push(new Block("wow", 0, "hacked"))
 console.log(blockchain.getBlocks());
