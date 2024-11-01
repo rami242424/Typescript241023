@@ -1,3 +1,3 @@
-let a : number[] = [1];
-let b : string[] = ['li'];
-let c : boolean[] = [true];
+let a  = [1];
+let b = ['li'];
+let c = [true];
