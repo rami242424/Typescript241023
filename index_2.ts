@@ -1,12 +1,10 @@
-let a : unknown;
+//void
 
-let b = a + 1;
+// function hello(): void
 
-if(typeof a === "number"){
-    let b = a + 1
+function hello(){
+    console.log("a")
 }
 
-
-if(typeof a === "string"){
-    let b = a.toUpperCase();
-}
+const a = hello();
+a.toUpperCase(); // Property 'toUpperCase' does not exist on type 'void'
