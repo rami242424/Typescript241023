@@ -1,10 +1,6 @@
-//void
+// never : 함수가 절대 return하지 않을 때 발생
 
-// function hello(): void
-
-function hello(){
-    console.log("a")
-}
-
-const a = hello();
-a.toUpperCase(); // Property 'toUpperCase' does not exist on type 'void'
+// Type 'string' is not assignable to type 'never'
+function hello(): never{
+    return "x"
+} 
