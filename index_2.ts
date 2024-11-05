@@ -1,6 +1,12 @@
 // never : 함수가 절대 return하지 않을 때 발생
+// else문은 절대 실행되지 않아야 한다.
 
-// return 하지 않고 오류를 발생시키는 함수
-function hello(): never{
-    throw new Error("X")
+function hello(name:string|number): never{
+    if(typeof name === "string"){
+        name + "string"
+    } else if(typeof name === "number"){
+        name + 1
+    } else {
+        name //(parameter) name: never)
+    }
 } 
