@@ -1,11 +1,9 @@
 type SuperPrint = {
-    (arr: number[]): void
-    (arr: boolean[]): void
+    <T>(arr: T[]): T
 }
 
-const superPrint: SuperPrint = (arr) => {
-    arr.forEach(i => console.log(i))
-}
+const superPrint: SuperPrint = (arr) => arr[0]
 
-superPrint([1,2,3,4])
-superPrint([true, false, false])
+const a = superPrint([1,2,3,4])
+const b = superPrint([true, false, false])
+const c = superPrint([false, true, 2, "yay", 4])
