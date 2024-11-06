@@ -3,7 +3,12 @@ type Player<E> = {
     extraInfo: E
 }
 
-const nico : Player<{favFood:string}> = {
+type NicoExtra = {
+    favFood: string;
+}
+type NicoPlayer = Player<NicoExtra>
+
+const nico : NicoPlayer = {
     name: "nico",
     extraInfo: {
         favFood: "hamburger"
