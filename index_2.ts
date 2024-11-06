@@ -1,12 +1,7 @@
-// never : 함수가 절대 return하지 않을 때 발생
-// else문은 절대 실행되지 않아야 한다.
+// function 함수
+function add (a: number, b:number): number{
+    return a + b
+}
 
-function hello(name:string|number): never{
-    if(typeof name === "string"){
-        name + "string"
-    } else if(typeof name === "number"){
-        name + 1
-    } else {
-        name //(parameter) name: never)
-    }
-} 
+// 화살표 함수
+const add = (a: number, b: number) => a+b
