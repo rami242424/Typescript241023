@@ -14,3 +14,8 @@ const nico : NicoPlayer = {
         favFood: "hamburger"
     }
 }
+
+const lynn : Player<null> = {
+    name: "lynn",
+    extraInfo: null
+}
