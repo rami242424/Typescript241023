@@ -1,25 +1,35 @@
-interface User {
-    firstName: string,  
-    lastName: string
-    sayHi(name: string): string
-    fullName(): string
+type PlayerA = {
+    name: string  
 }
 
-// 추가
-interface Human {
+// type추가하기
+type PlayerAA = PlayerA & {
+    lastName: string
+}
+
+const playerA : PlayerAA = {
+    name: "nico",
+    lastName: "oh"
+}
+
+///////////////////////////////
+
+interface PlayerB {
+    name: string
+}
+
+// interface추가하기1
+interface PlayerBB extends PlayerB {
+    lastName: string
+}
+
+// interface추가하기2
+interface PlayerBB {
     health: number
 }
 
-class Player implements User {
-    constructor(
-        public firstName:string,
-        public lastName: string,
-        public health: number
-    ){}
-    fullName(){
-        return `${this.firstName} ${this.lastName}`
-    }
-    sayHi(name: string){
-        return `Hello ${name}. My name is ${this.firstName}`
-    }
+const playerB : PlayerBB = {
+    name: "lynn",
+    lastName: "kim",
+    health: 29
 }
