@@ -1,20 +1,18 @@
-type Team = "red" | "blue" | "pink"
-type Health = 1 | 5 | 10
-
-// type Player = {
-//     nickname : string,
-//     team : Team
-//     health : Health
-// }
-
-interface Player {
-    nickname : string,
-    team : Team
-    health : Health
+// type version
+type User = {
+    name: string
+}
+type Player = User & {
 }
 
+// interface version
+// interface User {
+//     name: string
+// }
+
+// interface Player extends User {
+// }
+
 const nico : Player = {
-    nickname: "nico",
-    health: 5,
-    team: "blue"
+    name: "nico"
 }
