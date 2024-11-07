@@ -1,16 +1,20 @@
-type Nickname = string
-type Health = number
-type Friends = Array<string>
+type Team = "red" | "blue" | "pink"
+type Health = 1 | 5 | 10
 
-type Player = {
-    nickname: Nickname,
-    healthBar: Health
+// type Player = {
+//     nickname : string,
+//     team : Team
+//     health : Health
+// }
+
+interface Player {
+    nickname : string,
+    team : Team
+    health : Health
 }
 
-const nico: Player = {
-    nickname:"nico",
-    healthBar: 10
+const nico : Player = {
+    nickname: "nico",
+    health: 5,
+    team: "blue"
 }
-
-type Food = string;
-const kimchi : Food = "delicious"
