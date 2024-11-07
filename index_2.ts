@@ -1,18 +1,17 @@
-// type version
-type User = {
+interface User {
     name: string
 }
-type Player = User & {
+
+interface User {
+    firstName: string
 }
 
-// interface version
-// interface User {
-//     name: string
-// }
+interface User {
+    health : number
+}
 
-// interface Player extends User {
-// }
-
-const nico : Player = {
-    name: "nico"
+const nico : User = {
+    name: "nico",
+    firstName: "oh",
+    health : 3
 }
