@@ -1,35 +1,19 @@
 type PlayerA = {
-    name: string  
+    firstName: string
 }
-
-// type추가하기
-type PlayerAA = PlayerA & {
-    lastName: string
-}
-
-const playerA : PlayerAA = {
-    name: "nico",
-    lastName: "oh"
-}
-
-///////////////////////////////
 
 interface PlayerB {
-    name: string
+    firstName: string
 }
 
-// interface추가하기1
-interface PlayerBB extends PlayerB {
-    lastName: string
+class User1 implements PlayerA {
+    constructor(
+        public firstName: string
+    ){}
 }
 
-// interface추가하기2
-interface PlayerBB {
-    health: number
-}
-
-const playerB : PlayerBB = {
-    name: "lynn",
-    lastName: "kim",
-    health: 29
+class User2 implements PlayerB {
+    constructor(
+        public firstName: string
+    ){}
 }
