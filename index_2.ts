@@ -1,27 +1,13 @@
-interface SStorage<T>{
-    [key:string]: T
+type Player = {
+    name: string,
+    age?: number
 }
 
-class LocalStorage<T> {
-    private storage: SStorage<T> =  {}
-    set(key:string, value:T){
-        this.storage[key] = value;
-    }
-    remove(key:string){
-        delete this.storage[key]
-    }
-    get(key:string): T {
-        return this.storage[key]
-    }
-    clear(){
-        this.storage = {}
-    }
+const nico : Player = {
+    name: "nico"
 }
 
-const stringsStorage = new LocalStorage<string>()
-stringsStorage.get("yay")
-stringsStorage.set("hello", "bye")
-
-const booleansStorage = new LocalStorage<boolean>()
-booleansStorage.get("xxx")
-booleansStorage.set("hi", true)
+const lynn : Player = {
+    name: "lynn",
+    age : 30
+}
