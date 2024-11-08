@@ -1,12 +1,28 @@
-type SuperPrint = {
-    <T, M>(a: T[], b:M) : T
+type Player<E> = {
+    name: string
+    extraInfo: E
 }
 
-const superPrint: SuperPrint = (arr) => arr[0]
+// 방법1
+// type NicoPlayer = Player<{favFood:string}>
 
-const a = superPrint([1,2,3], 3)
-const b = superPrint([false, false, true],  "yay")
-const c = superPrint(["yay", "wow"], "wow")
-const d = superPrint([1,2,3, true, "yay", 2], true)
+// const nico: Player<{favFood: string}> = {
+//     name: "nico",
+//     extraInfo: {
+//         favFood: "kimchi"
+//     }
+// }
 
-c.toUpperCase();
+// 방법2
+type NicoExtra = {favFood: string}
+type NicoPlayer = Player<NicoExtra>
+const nico: NicoPlayer = {
+    name: "nico",
+    extraInfo: {
+        favFood: "kimchi"
+    }
+}
+const lynn: Player<null> = {
+    name: "lynn",
+    extraInfo: null
+}
