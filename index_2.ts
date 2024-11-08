@@ -1,11 +1,14 @@
-// call signature - shortcut
-type Add = (a:number, b:number) => number;
-
-// call signature - long way
-type Add = {
-    (a:number, b:number) : number
+type Config = {
+    path: string,
+    state: object
 }
 
-const add : Add = (a, b) => a + b 
+type Push = {
+    (path: string): void
+    (config: Config): void
+}
 
-// 오버로딩 : 서로 다른 여러개의 call signature을 가졌을 때 발생
+const push:Push = (config) => {
+    if(typeof config === "string") { console.log(config) }
+    else { console.log(config.path, config.state) }
+}
