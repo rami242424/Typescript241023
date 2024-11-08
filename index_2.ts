@@ -1,31 +1,19 @@
-type Words = {
-    [key: string]: string
+// interface User {
+//     name: string
+// }
+
+// interface Player extends User {
+
+// }
+
+// const nico : Player = {
+//     name: "nico"
+// }
+
+type User = {
+    name: string
 }
 
-class Dict {
-    private words : Words
-    constructor(){
-        this.words = {}
-    }
-    add(word:Word){
-        if(this.words[word.term] === undefined){
-            this.words[word.term] = word.def
-        }
-    }
-    def(term:string){
-        return this.words[term]
-    }
+type Player = User &{
+    
 }
-
-class Word {
-    constructor(
-        public term: string,
-        public def : string
-    ){}
-}
-
-const kimchi = new Word("kimchi", "한국의 음식");
-
-const dict = new Dict()
-dict.add(kimchi)
-dict.def("kimchi")
