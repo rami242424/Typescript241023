@@ -1,16 +1,3 @@
-type Age = number;
-type Name = string;
+type Add = (a:number, b:number) => number;
 
-type Player = {
-    name: Name,
-    age?: Age
-}
-
-function playerMaker(name: string) : Player{
-    return {
-        name
-    }
-}
-
-const nico = playerMaker("nico");
-nico.age = 12
+const add : Add = (a, b) => a + b
